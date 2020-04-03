@@ -10,7 +10,7 @@ use Mix.Config
 # Configures the endpoint
 config :pixelwars, PixelwarsWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "E8BQPH5le1V29XN6GALXoxxzPGufM9VVX53H4A2c8M9F3zJm0pnlGjXb1Wp6mds7",
+  secret_key_base: "timhRcq6zlPHluh3EitMfalNkD50YMlK2193clPEf5F8ElM7qfsotbhNjAC4Rbwj",
   render_errors: [view: PixelwarsWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Pixelwars.PubSub, adapter: Phoenix.PubSub.PG2]
 

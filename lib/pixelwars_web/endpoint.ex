@@ -40,7 +40,7 @@ defmodule PixelwarsWeb.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_pixelwars_key",
-    signing_salt: "BKSEG0JM"
+    signing_salt: "NrCCYqZ5"
 
   plug PixelwarsWeb.Router
 end
