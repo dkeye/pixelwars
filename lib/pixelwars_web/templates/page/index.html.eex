@@ -1,5 +1,8 @@
+<section class="color">
+    <label for="color">color</label>
+    <input type="color" id="color" value="#e66465">
+</section>
 <section class="square">
-    <canvas id="wars" width="200" height="200">
-
+    <canvas id="wars" width="700" height="500">
     </canvas>
 </section>
