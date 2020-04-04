@@ -7,10 +7,13 @@
 # General application configuration
 use Mix.Config
 
+config :pixelwars,
+  ecto_repos: [Pixelwars.Repo]
+
 # Configures the endpoint
 config :pixelwars, PixelwarsWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "timhRcq6zlPHluh3EitMfalNkD50YMlK2193clPEf5F8ElM7qfsotbhNjAC4Rbwj",
+  secret_key_base: "x7dFv0a/lbDrxl3HDZP85QjZa927fEtIS48QOJOMpoh1iTe6GjZuEon0mdNyM+tO",
   render_errors: [view: PixelwarsWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Pixelwars.PubSub, adapter: Phoenix.PubSub.PG2]
 
