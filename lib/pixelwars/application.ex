@@ -9,7 +9,8 @@ defmodule Pixelwars.Application do
     # List all child processes to be supervised
     children = [
       # Start the endpoint when the application starts
-      PixelwarsWeb.Endpoint
+      PixelwarsWeb.Endpoint,
+      Start.State
       # Starts a worker by calling: Pixelwars.Worker.start_link(arg)
       # {Pixelwars.Worker, arg},
     ]
