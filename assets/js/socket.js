@@ -7,7 +7,7 @@
 // Pass the token on params as below. Or remove it
 // from the params if you are not using authentication.
 import {Socket} from "phoenix"
-import {enteredPixel, fillBoard} from "./square_draw"
+import {enteredPixel, fillBoard} from "./square_draw.js"
 
 let socket = new Socket("/socket", {params: {token: window.userToken}});
 

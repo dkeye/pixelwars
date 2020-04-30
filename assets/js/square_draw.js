@@ -1,4 +1,4 @@
-import {sendPixel} from "./socket"
+import {sendPixel} from "./socket.js"
 
 const drawingCanvas = document.getElementById('wars');
 const pixelSize = 8;

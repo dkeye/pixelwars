@@ -7,15 +7,13 @@
 # General application configuration
 use Mix.Config
 
-config :pixelwars,
-  ecto_repos: [Pixelwars.Repo]
-
 # Configures the endpoint
 config :pixelwars, PixelwarsWeb.Endpoint,
   url: [host: "localhost"],
-  secret_key_base: "x7dFv0a/lbDrxl3HDZP85QjZa927fEtIS48QOJOMpoh1iTe6GjZuEon0mdNyM+tO",
-  render_errors: [view: PixelwarsWeb.ErrorView, accepts: ~w(html json)],
-  pubsub: [name: Pixelwars.PubSub, adapter: Phoenix.PubSub.PG2]
+  secret_key_base: "tRXzglISFnQbHMrRTo790VWH/lPVymzzTvlFHLweTLnzDbGw5VJpeVuEn+gT/AbJ",
+  render_errors: [view: PixelwarsWeb.ErrorView, accepts: ~w(html json), layout: false],
+  pubsub_server: Pixelwars.PubSub,
+  live_view: [signing_salt: "3i3u70QI"]
 
 # Configures Elixir's Logger
 config :logger, :console,

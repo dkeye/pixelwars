@@ -5,7 +5,7 @@ defmodule Pixelwars.MixProject do
     [
       app: :pixelwars,
       version: "0.1.0",
-      elixir: "~> 1.5",
+      elixir: "~> 1.7",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -33,13 +33,12 @@ defmodule Pixelwars.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.11"},
-      {:phoenix_pubsub, "~> 1.1"},
-      {:phoenix_ecto, "~> 4.0"},
-      {:ecto_sql, "~> 3.1"},
-      {:postgrex, ">= 0.0.0"},
+      {:phoenix, "~> 1.5.1"},
       {:phoenix_html, "~> 2.11"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
+      {:phoenix_live_dashboard, "~> 0.2.0"},
+      {:telemetry_metrics, "~> 0.4"},
+      {:telemetry_poller, "~> 0.4"},
       {:gettext, "~> 0.11"},
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"}
@@ -47,16 +46,14 @@ defmodule Pixelwars.MixProject do
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
-  # For example, to create, migrate and run the seeds file at once:
+  # For example, to install project dependencies and perform other setup tasks, run:
   #
-  #     $ mix ecto.setup
+  #     $ mix setup
   #
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-      "ecto.reset": ["ecto.drop", "ecto.setup"],
-      test: ["ecto.create --quiet", "ecto.migrate", "test"]
+      setup: ["deps.get", "cmd npm install --prefix assets"]
     ]
   end
 end

@@ -6,13 +6,16 @@ defmodule Pixelwars.Application do
   use Application
 
   def start(_type, _args) do
-    # List all child processes to be supervised
     children = [
-      # Start the endpoint when the application starts
+      # Start the Telemetry supervisor
+      PixelwarsWeb.Telemetry,
+      # Start the PubSub system
+      {Phoenix.PubSub, name: Pixelwars.PubSub},
+      # Start the Endpoint (http/https)
       PixelwarsWeb.Endpoint,
+      # Start a worker by calling: Pixelwars.Worker.start_link(arg)
+      # {Pixelwars.Worker, arg}
       Start.State
-      # Starts a worker by calling: Pixelwars.Worker.start_link(arg)
-      # {Pixelwars.Worker, arg},
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

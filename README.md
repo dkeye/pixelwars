@@ -1,10 +1,8 @@
 # Pixelwars
 
-Try to make reddit's pixelwars for learn html+css+js and Phoenix channels
-
 To start your Phoenix server:
 
-  * Install dependencies with `mix deps.get`
+  * Setup the project with `mix setup`
   * Start Phoenix endpoint with `mix phx.server`
 
 Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
